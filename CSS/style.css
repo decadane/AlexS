@@ -553,12 +553,13 @@ input[type="submit"]:hover {
 	padding-top: 160px;
 }
 
-#footer .f1 {
+.f1 {
 	height: 50px;
 	width: 150px;
 	position: absolute;
 	left: 130px;
 	top: 280px;
+	background: url(../img/matera_2019.png) no-repeat 0 0;
 }
 
 #footer .f2 {
@@ -567,4 +568,5 @@ input[type="submit"]:hover {
 	position: absolute;
 	right: 160px;
 	top: 280px;
+	background: url(../img/unesco_logo.png) no-repeat 0 0;
 }
