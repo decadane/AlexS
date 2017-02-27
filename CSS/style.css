@@ -65,7 +65,9 @@ h3 {
 
 #header .logo,
 #rooms .logo,
-#reservation .logo {
+#reservation .logo,
+#be-our-guests .logo,
+#footer-img .logo {
 	transform: scale(3);
 	color: white;
 	margin-top: -60px;
@@ -73,7 +75,9 @@ h3 {
 
 #header .logo::before,
 #rooms .logo::before,
-#reservation .logo::before {
+#reservation .logo::before,
+#be-our-guests .logo::before,
+#footer-img .logo::before {
 	border: 1px solid white;
 }
 
@@ -202,7 +206,7 @@ h3 {
 	font-family: "Open Sans Condensed", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
 	#room-1,
 	#room-2,
 	#room-3 {
@@ -210,7 +214,7 @@ h3 {
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 630px) {
 	#room-1,
 	#room-2,
 	#room-3 {
@@ -283,7 +287,6 @@ h3 {
 }
 
 #services {
-	height: 400px;
 	background-color: white;
 	text-align: center;
 }
@@ -296,17 +299,27 @@ h3 {
 	margin: 10px;
 } 
 
+@media screen and (max-width: 425px) {
+	#services p {
+		font-size: 12px;
+		width: 98%;
+	}
+
+	#services h4 {
+		font-size: 12px;
+		width: 98%;
+	}
+}
+
 #services-img {
 	background: url(../img/services.jpg) no-repeat 0 0;
 	background-size: auto 125%;
-	z-index: 4;
 	background-position: 50% 50%;
 	height: 400px;
 }
 
 #services-info {
 	padding: 10px;
-	height: 400px;
 }
 
 #reservation-img {
@@ -353,7 +366,7 @@ input[type="checkbox"] {
 	width: 0;
 	height: 0;
 	position: relative;
-	left: 40%;
+	left: 10px;
 }
 
 input[type="checkbox"]::before {
@@ -387,16 +400,37 @@ input[type="checkbox"]:checked::after {
 	#reservation-form {
 		height: 100%;
 	}
-
-	input[type="checkbox"] {
-	left: 45%;
-	}
 }
 
 label {
 	display: block;
+	position: absolute;
+	top: 355px;
+	left: 36px;
+}
+
+input[type="submit"] {
+	font-family: "Open Sans Condensed", sans-serif;
+	display: block;
+	width: 90%;
+	font-size: 16px;
+	height: 50px;
 	position: relative;
-	top: 20px;;
+	top: 40px;
+	left: 40px;
+	color: white;
+	font-weight: bold;
+	background-color: #590c0c;
+	border: #590c0c solid 2px;
+	border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+	color: #590c0c;
+	font-weight: bold;
+	background-color: white;
+	border: #590c0c solid 2px;
+	border-radius: 5px;
 }
 
 @keyframes rotate {
@@ -417,4 +451,120 @@ label {
 .logo:hover::before {
 	animation-name: rotate;
 	animation-duration: 0.4s;
+}
+
+#be-our-guests {
+	height: 300px;
+	background: url(../img/BOG.jpg) no-repeat 0 0;
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+}
+
+#be-our-guests .logo{
+	transform: scale(1);
+}
+
+#footer-img {
+	background: url(../img/footer.jpg) no-repeat 50% 50%;
+	height: 500px;
+	color: white;
+	background-size: auto 100%;
+}
+
+#footer-img .logo {
+	transform: scale(1);
+	position: absolute;
+	top: 50%;
+	left: -250px;
+}
+
+#footer-img p {
+	display: block;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	top: 42%;
+	left: 300px;
+}
+
+.social {
+	position: absolute;
+	bottom: 70px;
+	left: 30%;
+}
+
+.social a {
+	display: inline-block;
+	font-size: 0px;
+}
+
+.social a::before {
+	content: "\f09a";
+	display: block;
+	width: 15px;
+	height: 15px;
+	color: white;
+	font-size: 15px;
+	font-family: "FontAwesome";
+	padding: 10px;
+}
+
+.social a:nth-child(2)::before {
+	content: "\f099";
+}
+
+.social a:nth-child(3)::before {
+	content: "\f0d5";
+}
+
+.social a:nth-child(4)::before {
+	content: "\f0e1";
+}
+
+.social a:nth-child(5)::before {
+	content: "\f16e";
+}
+
+.social a:nth-child(6)::before {
+	content: "\f17d";
+}
+
+.social a:nth-child(7)::before {
+	content: "\f173";
+}
+
+.social a:hover {
+	text-decoration: none;
+}
+
+.social a:hover::before {
+	color: #590c0c;
+}
+
+#footer-info {
+	background-color: white;
+	height: 500px;
+}
+
+#footer-info p {
+	width: 70%;
+	text-align: center;
+	padding-top: 160px;
+}
+
+#footer .f1 {
+	height: 50px;
+	width: 150px;
+	position: absolute;
+	left: 130px;
+	top: 280px;
+}
+
+#footer .f2 {
+	height: 50px;
+	width: 70px;
+	position: absolute;
+	right: 160px;
+	top: 280px;
 }
